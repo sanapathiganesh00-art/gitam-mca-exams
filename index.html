@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="MCA GITAM Sessional-1 Notes & PYQs — organized study resources for MCA students.">
+  <title>MCA GITAM | Sessional-1 Notes & PYQs</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="bg-orb orb-one"></div>
+  <div class="bg-orb orb-two"></div>
+
+  <header class="topbar">
+    <div class="brand">
+      <div class="brand-mark">M</div>
+      <div>
+        <div class="brand-title">MCA GITAM</div>
+        <div class="brand-subtitle">Sessional-1 • Notes & PYQs</div>
+      </div>
+    </div>
+    <nav>
+      <button class="nav-link active" data-scroll="home">Home</button>
+      <button class="nav-link" data-scroll="subjects">Subjects</button>
+      <button class="nav-link" data-scroll="pyqs">PYQs</button>
+      <button class="nav-link" data-scroll="about">About</button>
+      <button class="theme-btn" id="themeBtn" aria-label="Toggle dark mode">☼</button>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero" id="home">
+      <div class="hero-copy">
+        <div class="pill">🎓 MCA • GITAM • I SEMESTER</div>
+        <h1>MCA Sessional-1<br><span>Notes &amp; PYQs</span></h1>
+        <p class="hero-text">
+          One clean place for your handwritten notes, unit-wise material and previous-year
+          question papers — made specially for your sessional preparation.
+        </p>
+        <div class="hero-actions">
+          <button class="primary-btn" data-scroll="subjects">Explore Subjects <span>→</span></button>
+          <button class="ghost-btn" id="randomBtn">Give me a random resource ✦</button>
+        </div>
+        <div class="stats">
+          <div><strong id="docCount">0</strong><span>Resources</span></div>
+          <div><strong id="subjectCount">4</strong><span>Subjects</span></div>
+          <div><strong>2M • 5M • 8M</strong><span>Exam Focus</span></div>
+        </div>
+      </div>
+      <div class="hero-card quick-card">
+        <div class="hero-card-top"><span class="live-dot"></span><span>QUICK ACCESS</span></div>
+        <div class="quick-grid">
+          <button data-scroll="subjects"><b>📚</b><span>Notes</span></button>
+          <button data-scroll="pyqs"><b>📝</b><span>PYQs</span></button>
+          <button data-scroll="subjects"><b>∑</b><span>Maths Units</span></button>
+          <button data-scroll="doubt"><b>✦</b><span>Doubt Buddy</span></button>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="subjects">
+      <div class="section-heading">
+        <div>
+          <div class="eyebrow">YOUR SUBJECTS</div>
+          <h2>Pick a subject and start.</h2>
+        </div>
+        <div class="search-wrap">
+          <span>⌕</span>
+          <input id="searchInput" type="search" placeholder="Search notes, PYQs, topics..." />
+        </div>
+      </div>
+
+      <div class="subject-grid" id="subjectGrid"></div>
+
+      <div class="library-head">
+        <div><div class="eyebrow">RESOURCE LIBRARY</div><h3 id="libraryTitle">Select a subject</h3></div>
+        <div class="library-note">Notes and PYQs are kept separate for quick revision.</div>
+      </div>
+      <section class="resource-section" id="notesSection">
+        <div class="resource-section-head"><h3>📚 Notes &amp; Study Material</h3><span class="section-count" id="notesCount">0</span></div>
+        <div class="resource-grid" id="notesGrid"></div>
+      </section>
+      <section class="resource-section" id="pyqsSection">
+        <div class="resource-section-head"><h3>📝 PYQs &amp; Question Papers</h3><span class="section-count" id="pyqsCount">0</span></div>
+        <div class="resource-grid" id="pyqsGrid"></div>
+      </section>
+      <div class="empty-state" id="emptyState" hidden>No matching resources found.</div>
+    </section>
+
+    <section class="feature-strip" id="pyqs">
+      <div class="feature-icon">📝</div>
+      <div>
+        <div class="eyebrow">EXAM MODE</div>
+        <h2>Practice the papers that matter.</h2>
+        <p>Use the PYQ filter to jump directly to sessional and full-test papers.</p>
+      </div>
+      <button class="primary-btn small" id="pyqBtn">Show PYQs →</button>
+    </section>
+
+    <section class="doubt-section" id="doubt">
+      <div class="doubt-copy">
+        <div class="eyebrow">DOUBT BUDDY</div>
+        <h2>Stuck on a concept?<br><span>Ask here.</span></h2>
+        <p>A lightweight study assistant is included in this site. Ask common exam-prep questions and get a quick explanation. You can later connect it to your preferred AI API.</p>
+        <div class="suggestions">
+          <button data-q="What is a process in Operating System?">What is a process?</button>
+          <button data-q="Explain FCFS scheduling simply">Explain FCFS</button>
+          <button data-q="What is a CSS box model?">CSS box model</button>
+          <button data-q="What is a Fibonacci series?">Fibonacci</button>
+        </div>
+      </div>
+      <div class="chat-card">
+        <div class="chat-head">
+          <div class="bot-avatar">✦</div>
+          <div><strong>Doubt Buddy</strong><small>Study assistant</small></div>
+          <span class="online">●</span>
+        </div>
+        <div class="chat-messages" id="chatMessages">
+          <div class="msg bot">Hi! 👋 Ask me a study doubt. I can help with the resources on this website.</div>
+        </div>
+        <form class="chat-form" id="chatForm">
+          <input id="chatInput" placeholder="Type your doubt..." autocomplete="off">
+          <button aria-label="Send">➤</button>
+        </form>
+      </div>
+    </section>
+
+    <section class="about" id="about">
+      <div>
+        <div class="eyebrow">ABOUT THIS HUB</div>
+        <h2>Built for fast revision.</h2>
+      </div>
+      <p>
+        This resource hub organizes the uploaded MCA study material into subjects, notes,
+        lessons and previous-year papers. For Maths, the five Discrete Mathematics unit PDFs
+        are presented as individual lesson choices so students can open exactly what they need.
+      </p>
+    </section>
+  </main>
+
+  <footer>
+    <div><strong>MCA GITAM</strong> <span>• Sessional-1 Notes & PYQs</span></div>
+    <div>Made for students • Study well 🚀</div>
+  </footer>
+
+  <div class="modal" id="pdfModal" aria-hidden="true">
+    <div class="modal-backdrop" data-close></div>
+    <div class="modal-box">
+      <div class="modal-head">
+        <div>
+          <div class="eyebrow">PDF VIEWER</div>
+          <h3 id="modalTitle">Resource</h3>
+        </div>
+        <div class="modal-actions">
+          <a id="openPdf" class="ghost-btn small" target="_blank" rel="noopener">Open in new tab ↗</a>
+          <button class="close-btn" data-close>×</button>
+        </div>
+      </div>
+      <iframe id="pdfFrame" title="PDF viewer"></iframe>
+    </div>
+  </div>
+
+  <script src="data.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
