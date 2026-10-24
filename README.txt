@@ -1,3 +1,8 @@
+# MY TEST HEADING
+
+## SECOND HEADING
+
+**BOLD TEXT**
 # MCA GITAM | Academic Resource Hub
 
 ## Project Overview
