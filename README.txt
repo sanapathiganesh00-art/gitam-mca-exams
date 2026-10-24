@@ -1,5 +1,9 @@
 # MCA GITAM | Academic Resource Hub
 
+## Project Overview
+
+Your project description goes here.# MCA GITAM | Academic Resource Hub
+
 <p align="center">
   <strong>SESSIONAL-1 NOTES &amp; PREVIOUS-YEAR QUESTION PAPERS</strong>
 </p>
